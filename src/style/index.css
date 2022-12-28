@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+/* 
+font-family: 'Kalam', cursive;
+font-family: 'Poppins', sans-serif;
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+}
+.orange {
+  filter: invert(40%) sepia(84%) saturate(1456%) hue-rotate(5deg)
+    brightness(97%) contrast(95%);
+}
+.orange-shadow {
+  -webkit-box-shadow: 0px 0px 35px 4px rgba(199, 133, 0, 0.54);
+  -moz-box-shadow: 0px 0px 35px 4px rgba(168, 112, 0, 0.54);
+  box-shadow: 0px 0px 35px 4px rgba(179, 120, 1, 0.54);
+}
+@layer components {
+  .app {
+    @apply bg-bgPrimary w-full h-fit min-h-screen bg-no-repeat bg-cover;
+  }
+  .google-logo {
+    @apply flex justify-center items-center bg-white rounded-md text-black font-bold w-14 h-fit p-2 aspect-square;
+  }
+  .google-button {
+    @apply w-full p-2 bg-blue-600 text-white rounded-xl flex justify-between items-center mt-14 mb-12;
+  }
+}
